@@ -1,19 +1,19 @@
 package org.example.steps;
 
 import com.github.tomakehurst.wiremock.matching.EqualToPattern;
-import io.cucumber.java.en.Given;
+import io.cucumber.java.ru.Дано;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 
 public class ThirdPartyServicesStepsDefinitions extends AbstractStepsDefinitions {
 
-    @Given("Age API will not confirm that user with name {string} is adult")
+    @Дано("Age API не подтвердит что человек с именем {string} совершеннолетний")
     public void ageAPIDoesNotConfirmThatUserWithNameIsAdult(String name) {
         mockAgeApi(name, false);
     }
 
-    @Given("Age API will confirm that user with name {string} is adult")
+    @Дано("Age API подтвердит что человек с именем {string} совершеннолетний")
     public void ageAPIConfirmsThatUserWithNameIsAdult(String name) {
         mockAgeApi(name, true);
     }
@@ -30,12 +30,12 @@ public class ThirdPartyServicesStepsDefinitions extends AbstractStepsDefinitions
         );
     }
 
-    @Given("Word API will not find swearing words in post")
+    @Дано("Word API не найдет матных слов в посте")
     public void wordAPIConfirmsThatPostDoesNotHaveSwearingWords() {
         mockWordApi(false);
     }
 
-    @Given("Word API will find swearing words in post")
+    @Дано("Word API найдет матные слов в посте")
     public void wordAPIFindsSwearingWordsInPost() {
         mockWordApi(true);
     }

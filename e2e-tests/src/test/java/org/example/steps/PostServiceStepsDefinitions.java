@@ -1,7 +1,7 @@
 package org.example.steps;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.ru.Когда;
+import io.cucumber.java.ru.Тогда;
 import org.awaitility.Awaitility;
 import org.example.dto.PostDto;
 
@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 public class PostServiceStepsDefinitions extends AbstractStepsDefinitions {
 
-    @When("user creates a post with content {string}")
+    @Когда("пользователь создает пост с текстом {string}")
     public void userCreatesAPostWithContent(String content) {
         Long userId = getContext().getUserId();
         PostDto postDto = new PostDto();
@@ -19,7 +19,7 @@ public class PostServiceStepsDefinitions extends AbstractStepsDefinitions {
         postServiceClient.createNewPost(postDto);
     }
 
-    @Then("user has one post")
+    @Тогда("у пользователя есть один пост")
     public void nowUserHasOnePost() {
         Long userId = getContext().getUserId();
         List<PostDto> list = postServiceClient.findAllByUserId(userId);
@@ -28,7 +28,7 @@ public class PostServiceStepsDefinitions extends AbstractStepsDefinitions {
         }
     }
 
-    @Then("social network does not have posts for user any more")
+    @Тогда("в соцсети больше нет постов пользователя")
     public void socialNetworkDoesNotHavePostsForUserAnyMore() {
         Long userId = getContext().getUserId();
 

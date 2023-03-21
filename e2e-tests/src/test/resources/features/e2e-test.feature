@@ -1,24 +1,25 @@
-Feature: Life cycle of user in social network
+# language: ru
+Функция: Жизненный цикл пользователя в социальной сети
 
-  Scenario: Life cycle of user in social network
+  Сценарий: Жизненный цикл пользователя в социальной сети
 
-    Given Age API will not confirm that user with name "Mad Max" is adult
-    When anonymous user creates a user account in social network with name "Mad Max"
-    Then user account not created because user's age is under 18
+    Дано Age API не подтвердит что человек с именем "Mad Max" совершеннолетний
+    Когда анонимный пользователь пробует создать аккаунт в социальной сети с именем "Mad Max"
+    Тогда аккаунт не создан так как пользователю нет 18 лет
 
-    Given Age API will confirm that user with name "Alex K" is adult
-    When anonymous user creates a user account in social network with name "Alex K"
-    Then user account successfully created
+    Дано Age API подтвердит что человек с именем "Alex K" совершеннолетний
+    Когда анонимный пользователь пробует создать аккаунт в социальной сети с именем "Alex K"
+    Тогда аккаунт пользователя успешно создан в соцсети
 
-    Given Word API will not find swearing words in post
-    When user creates a post with content "Hello world!"
-    Then user has one post
+    Дано Word API не найдет матных слов в посте
+    Когда пользователь создает пост с текстом "Привет мир!"
+    Тогда у пользователя есть один пост
 
-    # Word API considers the word 'banana' as a swearing word :)
-    Given Word API will find swearing words in post
-    When user creates a post with content "Hello world, banana!!!"
-    Then user has one post
+    # Word API считате, что слово 'банан' это матное слова :)
+    Дано Word API найдет матные слов в посте
+    Когда пользователь создает пост с текстом "Привет мир! Я банан!!!"
+    Тогда у пользователя есть один пост
 
-    When user decides to delete their account
-    Then social network does not have posts for user any more
-    Then social network does not have user account any more
+    Когда пользователь решает удалить свой аккаунт
+    Тогда в соцсети больше нет постов пользователя
+    Тогда в соцсети больше нет записи о пользователе

@@ -1,14 +1,14 @@
 package org.example.steps;
 
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+import io.cucumber.java.ru.Когда;
+import io.cucumber.java.ru.Тогда;
 import org.example.dto.UserDto;
 
 import java.util.Optional;
 
 public class UserServiceStepsDefinitions extends AbstractStepsDefinitions {
 
-    @When("anonymous user creates a user account in social network with name {string}")
+    @Когда("анонимный пользователь пробует создать аккаунт в социальной сети с именем {string}")
     public void anonymousUserCreatesAUserAccountInSocialNetworkWithName(String name) {
         getContext().setUserName(name);
         UserDto dto = new UserDto();
@@ -22,7 +22,7 @@ public class UserServiceStepsDefinitions extends AbstractStepsDefinitions {
         System.out.println("User not created with name: " + name);
     }
 
-    @Then("user account not created because user's age is under 18")
+    @Тогда("аккаунт не создан так как пользователю нет 18 лет")
     public void userAccountNotCreatedBecauseUserSAgeIsUnder() {
         String userName = getContext().getUserName();
         Optional<UserDto> userDtoOptional = userServiceClient.findUserByName(userName);
@@ -31,7 +31,7 @@ public class UserServiceStepsDefinitions extends AbstractStepsDefinitions {
         }
     }
 
-    @Then("user account successfully created")
+    @Тогда("аккаунт пользователя успешно создан в соцсети")
     public void userAccountSuccessfullyCreated() {
         Long userId = getContext().getUserId();
         Optional<UserDto> userDtoOptional = userServiceClient.findUserById(userId);
@@ -40,13 +40,13 @@ public class UserServiceStepsDefinitions extends AbstractStepsDefinitions {
         }
     }
 
-    @When("user decides to delete their account")
+    @Когда("пользователь решает удалить свой аккаунт")
     public void userDecidesToDeleteTheirAccount() {
         Long userId = getContext().getUserId();
         userServiceClient.deleteUserAccount(userId);
     }
 
-    @Then("social network does not have user account any more")
+    @Тогда("в соцсети больше нет записи о пользователе")
     public void socialNetworkDoesNotHaveUserAccountAnyMore() {
         Long userId = getContext().getUserId();
         Optional<UserDto> userDtoOptional = userServiceClient.findUserById(userId);
