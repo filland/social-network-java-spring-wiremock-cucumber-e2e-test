@@ -1,0 +1,12 @@
+spring:
+  main:
+    banner-mode: "off"
+
+social-network:
+  wiremock-port: 5558
+  discovery:
+    user-service: http://localhost:8000
+    post-service: http://localhost:8001
+
+logging.level.root: ERROR
+logging.level.org.springframework: ERROR

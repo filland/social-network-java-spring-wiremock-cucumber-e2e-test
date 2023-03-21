@@ -1,0 +1,24 @@
+server:
+  port: 8000
+
+social-network:
+  discovery:
+    post-service: http://localhost:8001
+  age-api-url: http://localhost:5558
+spring:
+  sql:
+    init:
+      platform: h2
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  h2:
+    embedded:
+      tcp:
+        port: 9092
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1;IGNORECASE=TRUE;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
