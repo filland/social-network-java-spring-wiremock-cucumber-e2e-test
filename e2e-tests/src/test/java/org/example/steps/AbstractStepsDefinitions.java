@@ -7,12 +7,6 @@ import org.example.common.client.PostServiceClient;
 import org.example.common.client.UserServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.Map;
-
-/**
- * @author Aliaksei.Kurbatau
- * @since 12/20/2022
- */
 public class AbstractStepsDefinitions {
 
     private static final ThreadLocal<TestContext> context = ThreadLocal.withInitial(TestContext::new);

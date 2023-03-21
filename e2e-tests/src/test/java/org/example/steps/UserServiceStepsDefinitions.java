@@ -6,10 +6,6 @@ import org.example.dto.UserDto;
 
 import java.util.Optional;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 public class UserServiceStepsDefinitions extends AbstractStepsDefinitions {
 
     @When("anonymous user creates a user account in social network with name {string}")

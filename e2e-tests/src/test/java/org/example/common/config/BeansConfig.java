@@ -8,10 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 12/21/2022
- */
 @Configuration
 public class BeansConfig {
 
@@ -21,7 +17,7 @@ public class BeansConfig {
     @Bean
     public WireMockServer wiremockServer() {
         WireMockServer wireMockServer = new WireMockServer(
-            WireMockConfiguration.wireMockConfig().port(wiremockPort)
+                WireMockConfiguration.wireMockConfig().port(wiremockPort)
         );
         wireMockServer.start();
         WireMock.configureFor(wireMockServer.getOptions().bindAddress(), wireMockServer.port());

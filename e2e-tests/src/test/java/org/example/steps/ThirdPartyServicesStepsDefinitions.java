@@ -6,10 +6,6 @@ import io.cucumber.java.en.Given;
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.post;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 public class ThirdPartyServicesStepsDefinitions extends AbstractStepsDefinitions {
 
     @Given("Age API will not confirm that user with name {string} is adult")

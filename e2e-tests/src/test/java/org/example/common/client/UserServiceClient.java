@@ -11,12 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Optional;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @FeignClient(name = "userServiceClient",
-    url = "${social-network.discovery.user-service}/api/user-service/users")
+        url = "${social-network.discovery.user-service}/api/user-service/users")
 public interface UserServiceClient {
 
     @PostMapping

@@ -4,8 +4,6 @@ import org.example.dto.PostDto;
 import org.example.model.Post;
 import org.example.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -14,10 +12,6 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @Service
 public class PostService {
 
@@ -45,7 +39,7 @@ public class PostService {
 
     public PostDto findPost(Long postId) {
         Post post = postRepository.findById(postId)
-            .orElseThrow(() -> new RuntimeException("post with id not found: " + postId));
+                .orElseThrow(() -> new RuntimeException("post with id not found: " + postId));
         PostDto dto = new PostDto();
         dto.setId(post.getId());
         dto.setUserId(post.getUserId());

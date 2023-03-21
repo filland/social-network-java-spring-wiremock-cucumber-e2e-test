@@ -15,10 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @RestController
 @RequestMapping("/api/user-service/users")
 public class UserController {

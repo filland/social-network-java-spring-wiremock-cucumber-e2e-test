@@ -1,6 +1,5 @@
 package org.example.model;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -11,10 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @Entity
 @Table(name = "users")
 @Getter

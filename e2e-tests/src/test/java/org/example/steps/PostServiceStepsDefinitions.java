@@ -5,15 +5,9 @@ import io.cucumber.java.en.When;
 import org.awaitility.Awaitility;
 import org.example.dto.PostDto;
 
-import java.time.Duration;
-import java.time.temporal.ChronoUnit;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 public class PostServiceStepsDefinitions extends AbstractStepsDefinitions {
 
     @When("user creates a post with content {string}")

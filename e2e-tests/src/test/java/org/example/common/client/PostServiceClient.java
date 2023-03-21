@@ -10,12 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import java.util.List;
 import java.util.Optional;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @FeignClient(name = "postServiceClient",
-    url = "${social-network.discovery.post-service}/api/post-service/posts")
+        url = "${social-network.discovery.post-service}/api/post-service/posts")
 public interface PostServiceClient {
 
     @PostMapping

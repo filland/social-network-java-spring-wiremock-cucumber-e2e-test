@@ -5,10 +5,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 12/26/2022
- */
 @Component
 @AllArgsConstructor
 public class JsonHelper {

@@ -11,10 +11,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @Entity
 @Table(name = "post")
 @Getter

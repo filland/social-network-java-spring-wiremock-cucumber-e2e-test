@@ -5,10 +5,6 @@ import org.example.dto.AgeApiRequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 3/11/2023
- */
 @Service
 public class AgeApiService {
 

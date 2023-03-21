@@ -3,10 +3,6 @@ package org.example.common;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
- * @author Aliaksei.Kurbatau
- * @since 12/26/2022
- */
 public class TestContext {
 
     private final Map<String, Object> map = new HashMap<>();
