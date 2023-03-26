@@ -10,5 +10,10 @@ Java 17, Maven 3
 
 ### Как запустить e2e тест
 1. Запускаем UserService со спринг профилем 'e2e'
+> mvn spring-boot:run '-Dspring-boot.run.profiles=e2e'
+
 2. Запускаем PostService со спринг профилем 'e2e'
-3. Запускаем фича файлы из пакета e2e-tests/src/test/resources/features/* используя эту команду:
+> mvn spring-boot:run '-Dspring-boot.run.profiles=e2e'
+
+3. Запускаем фича файлы. Переходим в модуль e2e-test и запускаем:
+> mvn clean install
